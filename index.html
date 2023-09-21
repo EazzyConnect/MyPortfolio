@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>My Portfolio</title>
  <link rel="stylesheet" href="style.css">
+ <script src="https://kit.fontawesome.com/4aac937350.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -28,6 +29,7 @@
  </div>
 
  <!-- -----ABOUT----- -->
+
  <div id="about">
   <div class="container">
    <div class="row">
@@ -35,10 +37,106 @@
      <img src="Images/Image1.jpg" >
     </div>
     <div class="about-col-2">
-     <h2>About Me</h2>
+     <h2 class="subtitle">About Me</h2>
+     <p>Dedicated and innovative software engineer striving to connect, unify and make a great impact in the world of technology. A creative thinker, adept in software development and working with various data structures.</p>
+     <div class="tab-titles">
+      <p class="tab-links A" onclick="opentab('skills')">Skills</p>
+      <p class="tab-links" onclick="opentab('experience')">Experience</p>
+      <p class="tab-links" onclick="opentab('education')">Education</p>
+     </div>
+     <div class="tab-contents Aa" id="skills">
+      <ul>
+       <li><span>Backend Web Development</span><br>Creating and validating endpoints for use in web application development.</li>
+       <li><span>Web Development</span><br>Web application design and development.</li>       
+      </ul>
+     </div>
+     <div class="tab-contents" id="experience">
+      <ul>
+       <li><span>2022-2023</span><br>Backend Engineer at TechQuest</li>
+       <li><span>2022</span><br>Software Developer at Zuri Cohort</li>       
+      </ul>
+     </div>
+     <div class="tab-contents" id="education">
+      <ul>
+       <li><span>2023</span><br>Certificate in Backend Web Development</li>
+       <li><span>2009-2014</span><br>B.Sc, Olabisi Onabanjo University</li>       
+      </ul>
+     </div>
     </div>
    </div>
   </div>
  </div>
+
+ <!-- -----SERVICES----- -->
+
+ <div id="services">
+  <div class="container">
+   <h2 class="subtitle">My Services</h2>
+   <div class="services-list">
+    <div>
+     <i class="fa-solid fa-database"></i>
+     <h2>Backend Web Development</h2>
+     <p>Building the server-side logic and infrastructure that powers web applications, ensures security and optimizng performance.</p>
+     <a href="#">Learn More</a>
+    </div>
+    <div>
+     <i class="fa-solid fa-code"></i>
+     <h2>Web Design</h2>
+     <p>Creating responsive websites that are visually appealing and user-friendly.</p>
+     <a href="#">Learn More</a>
+    </div>
+   </div>
+  </div>
+ </div>
+
+<!-- ----PORTFOLIO---- -->
+<div id="portfolio">
+ <div class="container">
+  <h2 class="subtitle">My Work</h2>
+  <div class="work-list">
+   <div class="work">
+    <img src="Images/work1.jpeg">
+    <div class="layer">
+     <h3>Portfolio App</h3>
+     <p>The app allows you to register, create and download resume.</p>
+     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+   </div>
+   <div class="work">
+    <img src="Images/work1.jpeg">
+    <div class="layer">
+     <h3>Portfolio App</h3>
+     <p>The app allows you to register, create and download resume.</p>
+     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+   </div>
+   <div class="work">
+    <img src="Images/work1.jpeg">
+    <div class="layer">
+     <h3>Portfolio App</h3>
+     <p>The app allows you to register, create and download resume.</p>
+     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+   </div>
+  </div>
+  <a href="#" class="btn">See More</a>
+ </div>
+</div>
+
+ <script>
+  const tablinks = document.getElementsByClassName("tab-links");
+  const tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+   for(tablink of tablinks){
+    tablink.classList.remove("A")
+   }
+   for(tabcontent of tabcontents){
+    tabcontent.classList.remove("Aa")
+   }
+   event.currentTarget.classList.add("A");
+   document.getElementById(tabname).classList.add("Aa")
+  }
+ </script>
 </body>
 </html>
