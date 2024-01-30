@@ -45,8 +45,8 @@ nav ul li {
 }
 
 nav ul li a {
-  color: red;
-  background-color: rgb(212, 212, 242);
+  color: whitesmoke;
+  background-color: rgb(13, 13, 236);
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -56,15 +56,15 @@ nav ul li a {
 }
 
 a:hover {
-  background-color: red;
-  color: rgb(212, 212, 242);
+  background-color: rgb(161, 187, 236);
+  color: rgb(9, 9, 40);
 }
 
 nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
-  background: blue;
+  background: rgb(236, 27, 27);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -247,6 +247,10 @@ nav ul li a:hover::after {
 .services-list div:hover {
   background: #ff004f;
   transform: translateY(-10px);
+}
+
+.serviceText {
+  color: whitesmoke;
 }
 
 /* ----Portfolio---- */
